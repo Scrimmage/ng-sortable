@@ -63,7 +63,7 @@
         eventObj: function (event) {
           var obj = event;
           if (event.targetTouches !== undefined) {
-            obj = event.targetTouches.item(0);
+            obj = event.targetTouches.item(0) || event.touches.item(0);
           } else if (event.originalEvent !== undefined && event.originalEvent.targetTouches !== undefined) {
             obj = event.originalEvent.targetTouches.item(0);
           }
